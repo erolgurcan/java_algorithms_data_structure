@@ -8,6 +8,34 @@ public class App {
 
         System.out.println(multiply(7, 4));
 
+        // 2) Write a method that returns the largest value in an array that is passed
+        // as an argument.
+        // The method should use recursion to find the largest element.
+
+        int[] arr = { 5, 8, 2, 9, 7 };
+        int cnt = 0;
+
+        System.out.print(findLargest(arr, cnt, 0));
+    }
+
+    public static int findLargest(int[] arr, int cnt, int largest) {
+
+        if (cnt < arr.length) {
+
+            if (largest < arr[cnt]) {
+                largest = arr[cnt];
+                System.out.println(arr[cnt] + " " + largest + " " + cnt);
+                return findLargest(arr, cnt + 1, largest);
+            } else {
+                System.out.println(arr[cnt] + " " + largest + " " + cnt);
+                return findLargest(arr, cnt + 1, largest);
+            }
+
+        } else {
+            System.out.println("last" + " " + largest);
+            return largest;
+        }
+
     }
 
     public static int multiply(int x, int y) {
