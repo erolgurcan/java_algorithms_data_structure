@@ -22,7 +22,7 @@ public class App {
         // 3) Consider the method displayRowOfCharacters that displays any given
         // character the specified number times on one line. For example, the call
 
-        // System.out.println(displayRowOfCharacters("*", 5));
+        System.out.println(displayRowOfCharacters("*", 5));
 
         // 4) Write a method that asks the user for integer input that is between 1 and
         // 10, inclusive.
@@ -34,16 +34,16 @@ public class App {
         // 5) Write a recursive method that displays a portion of a given array
         // backward. Consider the last entry in the portion first.
 
-        // int[] arr = { 5, 8, 2, 9, 7 };
-        // int[] arrOut = new int[arr.length];
+        int[] arr = { 5, 8, 2, 9, 7 };
+        int[] arrOut = new int[arr.length];
 
-        // int[] arrOutDone = reverseArray(arr, arrOut, arr.length);
+        int[] arrOutDone = reverseArray(arr, arrOut, arr.length);
 
-        // for (int i = 0; i < arrOutDone.length; i++) {
-        // System.out.println(arrOutDone[i]);
-        // }
+        for (int i = 0; i < arrOutDone.length; i++) {
+            System.out.println(arrOutDone[i]);
+        }
 
-        f(16);
+        // f(16);
 
     }
 
