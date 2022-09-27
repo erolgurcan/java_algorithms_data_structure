@@ -4,6 +4,8 @@ public class App {
 
         int[] arr = { 5, 8, 10, 13, 15, 20, 22, 26, 30, 31, 34, 40 };
 
+        int[] nums = { -1, 0, 3, 5, 9, 12 };
+
         final int array_size = 10000;
         int[] arrTest = new int[array_size];
 
@@ -11,20 +13,20 @@ public class App {
             arrTest[i] = i * (i - 1);
         }
 
-        long startTime = System.nanoTime();
-        // binarySearchIterative1(arrTest, 99970002);
-        // binarySearchIterative2(arrTest, 80937012);
+        // long startTime = System.nanoTime();
+        // binarySearchIterative1(nums, 9);
+        binarySearchIterative2(nums, 9);
 
         // int low = 0;
         // int high = arrTest.length - 1;
         // binarySearchRecursive(arrTest, low, high, 92785056);
 
         // linearSearchIterative(arrTest, 99890030);
-        linearSearchRecursive(arrTest, 0, 99890030);
+        // linearSearchRecursive(arrTest, 0, 99890030);
 
-        long endTime = System.nanoTime();
-        long totalTime = endTime - startTime;
-        System.out.println(totalTime / 1000);
+        // long endTime = System.nanoTime();
+        // long totalTime = endTime - startTime;
+        // System.out.println(totalTime / 1000);
     }
 
     public static int linearSearchRecursive(int[] arr, int index, int toFind) {
