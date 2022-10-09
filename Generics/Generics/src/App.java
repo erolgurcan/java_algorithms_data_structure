@@ -12,5 +12,10 @@ public class App {
         // GenericsNumber<Integer> ob3 = new GenericsNumber<Integer>(4);
         // System.out.println(ob3.square());
 
+        // Wild Card
+        GenericsWildCard<Integer> iOb = new GenericsWildCard<Integer>(6);
+        GenericsWildCard<Double> dOb = new GenericsWildCard<Double>(-6.0);
+        iOb.absEqual(dOb);
+
     }
 }

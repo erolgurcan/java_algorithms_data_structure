@@ -6,9 +6,9 @@ public class GenericsWildCard<T extends Number> {
         this.num = ob;
     }
 
-    public boolean absEqual(GenericsWildCard<T> ob) {
+    public boolean absEqual(GenericsWildCard<?> dOb) {
 
-        if (Math.abs(num.doubleValue()) == Math.abs(ob.num.doubleValue())) {
+        if (Math.abs(num.doubleValue()) == Math.abs(dOb.num.doubleValue())) {
             return true;
         }
         return false;
