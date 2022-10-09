@@ -50,7 +50,7 @@ public class App {
 
         for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i] == toFind) {
+            if (arr[i] == toFind) {3
                 System.out.println("Found at index" + i);
                 return i;
             }

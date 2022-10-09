@@ -124,12 +124,4 @@ public class App {
 
     }
 
-    public static int multiply(int x, int y) {
-        if (y > 0) {
-            return x + multiply(x, y - 1);
-        } else {
-            return 0;
-        }
-    }
-
 }

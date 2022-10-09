@@ -48,11 +48,8 @@ public class App {
             }
 
             int temp = arr[i];
-
             arr[i] = arr[mn_idx];
-
             arr[mn_idx] = temp;
-
         }
 
         return arr;
