@@ -39,6 +39,7 @@ public class AbstractList<T> implements InterfaceList<T> {
     @Override
     public void remove(int givenPosition) {
         array[givenPosition] = null;
+
     }
 
     @Override
