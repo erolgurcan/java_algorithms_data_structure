@@ -12,7 +12,7 @@ public interface AbstractLinkedList<T> {
 
     public T getEntry(int givenPosition);
 
-    public void toArray();
+    public Object[] toArray();
 
     public boolean contains(T anEntry);
 
