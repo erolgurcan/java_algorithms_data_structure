@@ -17,7 +17,10 @@ public class LinkedStack<T> implements StackInterface<T> {
     }
 
     public T pop() {
-        return null;
+
+        T pop = peek();
+        topNode = topNode.getNextNode();
+        return pop;
     }
 
     public T peek() {
@@ -34,6 +37,7 @@ public class LinkedStack<T> implements StackInterface<T> {
     }
 
     public void clear() {
-
+        topNode = null;
+        numberOfEntries = 0;
     }
 }

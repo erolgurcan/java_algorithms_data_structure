@@ -13,7 +13,7 @@ public class Node<T> {
         return this.data;
     }
 
-    public void getNextNode() {
-
+    public Node getNextNode() {
+        return next;
     }
 }
