@@ -22,6 +22,16 @@ public class LinkedQueue<T> implements QueueInterface<T> {
     }
 
     public void dequeue() {
+        T front = getFront(); // Might throw EmptyQueueException
+        // Assertion: firstNode != null
+        firstNode.setData(null);
+        firstNode = firstNode.getNextNode();
+
+        if (firstNode == null)
+            lastNode = null;
+
+        return front;
+
     };
 
     public T getFront() {

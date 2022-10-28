@@ -46,10 +46,11 @@ public class AList<T> implements ListInterface<T> {
 
     }
 
-    public void makeRoom(int newPosition) {
-        int newLength = 2 * list.length;
-        checkCapacity(newLength);
-        list = Arrays.copyOf(list, newLength);
+    private void makeRoom(int givenPosition) {
+        int newIndex = givenPosition;
+        int lastIndex = numberOfEntries;
+        for (int index = lastIndex; index >= newIndex; index--)
+            list[index + 1] = list[index];
     }
 
     public void add(int newPosition, T newEntry) {

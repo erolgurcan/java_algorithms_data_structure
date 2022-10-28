@@ -16,4 +16,8 @@ public class Node<T> {
         return firstNode;
     }
 
+    public void setData(Node next) {
+        this.next = next;
+    }
+
 }
