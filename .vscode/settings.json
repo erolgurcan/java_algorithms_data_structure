@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "Sorting/src",
         "Queue/src",
-        "Sorting/src"
+        "AbstractDataTypes/Queue/src"
     ]
 }
