@@ -16,7 +16,7 @@ public class LListApp<T> implements AbstractLinkedList<T> {
         while (currentNode != null) {
 
             System.out.println(i + "<-->" + currentNode.data.toString());
-            currentNode = currentNode.next;
+            currentNode = currentNode.getNextNode;
             i++;
         }
     }
@@ -25,7 +25,7 @@ public class LListApp<T> implements AbstractLinkedList<T> {
     public void add(T newEntry) {
         Node newNode = new Node(newEntry);
 
-        newNode.next = firstNode;
+        newNode.getNextNode = firstNode;
 
         firstNode = newNode;
         numberOfEntries++;
@@ -42,14 +42,14 @@ public class LListApp<T> implements AbstractLinkedList<T> {
             Node newNode = new Node(newEntry);
 
             for (int i = 0; i < newPosition; i++) {
-                currentNode = currentNode.next;
+                currentNode = currentNode.getNextNode();
             }
 
             Node beforeNode = currentNode;
-            Node afterNode = currentNode.next;
+            Node afterNode = currentNode.getNextNode;
 
-            newNode.next = afterNode;
-            beforeNode.next = newNode;
+            newNode.getNextNode = afterNode;
+            beforeNode.getNextNode = newNode;
             numberOfEntries++;
         }
     }
@@ -61,7 +61,7 @@ public class LListApp<T> implements AbstractLinkedList<T> {
 
         if (givenPosition == 0) {
 
-            currentNode = currentNode.next;
+            currentNode = currentNode.getNextNode;
             firstNode = currentNode;
             numberOfEntries--;
             return;
@@ -69,13 +69,13 @@ public class LListApp<T> implements AbstractLinkedList<T> {
         }
 
         for (int i = 0; i < givenPosition - 1; i++) {
-            currentNode = currentNode.next;
+            currentNode = currentNode.getNextNode;
         }
 
         Node beforeNode = currentNode;
-        Node afterNode = currentNode.next;
-        afterNode = afterNode.next;
-        beforeNode.next = afterNode;
+        Node afterNode = currentNode.getNextNode;
+        afterNode = afterNode.getNextNode;
+        beforeNode.getNextNode = afterNode;
         numberOfEntries--;
 
     }

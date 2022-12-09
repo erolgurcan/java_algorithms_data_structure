@@ -14,6 +14,11 @@ public class Node<T> {
 
     public T getNodeData() {
         return data;
+
+    }
+
+    public Node getNextNode() {
+        return next;
     }
 
 }
